@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.nanchen.rxjava2examples">
 
-    <!--申明可能需要的网络权限-->
+    <!-- 申明可能需要的网络权限 -->
     <uses-permission android:name="android.permission.INTERNET"/>
-
 
     <application
         android:allowBackup="true"
@@ -14,13 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--主页面，程序入口-->
-        <activity android:name=".MainActivity">
+        <!-- 主页面，程序入口 -->
+        <activity android:name=".RxOperatorsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <!--Create-->
+        <activity android:name=".module.rxjava2.operators.RxCreateActivity">
+        </activity>
+
+        <!--Just-->
+        <activity android:name=".module.rxjava2.operators.RxJustActivity">
         </activity>
     </application>
 

@@ -4,7 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
 
+import com.nanchen.rxjava2examples.R;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -16,6 +22,11 @@ import butterknife.ButterKnife;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
+    @BindView(R.id.title_text)
+    TextView mTitleName;
 
     /**
      * 获取布局ID
@@ -38,6 +49,11 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected abstract void initView(Bundle savedInstanceState);
 
+    /**
+     * 设置标题文本
+     */
+    protected abstract String getSubTitle();
+
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         super.setContentView(layoutResID);
@@ -50,7 +66,39 @@ public abstract class BaseActivity extends AppCompatActivity {
         beforeInit();
         if (getContentViewLayoutID() != 0) {
             setContentView(getContentViewLayoutID());
+            initToolbar();
             initView(savedInstanceState);
         }
     }
+
+    private void initToolbar() {
+        if (mToolbar != null){
+            mToolbar.setTitle("");
+            mTitleName.setText(getSubTitle());
+            if (isShowBack()){
+                showBack();
+            }
+        }
+    }
+
+    /**
+     * 版本号小于21的后退按钮图片
+     */
+    private void showBack(){
+        //setNavigationIcon必须在setSupportActionBar(toolbar);方法后面加入
+        setSupportActionBar(mToolbar);
+        mToolbar.setNavigationIcon(R.mipmap.icon_back);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+
+    protected boolean isShowBack(){
+        return true;
+    }
+
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nanchen.rxjava2examples.RxOperatorsActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_create"
+        android:id="@+id/rx_btn_create"/>
+
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_just"
+        android:id="@+id/rx_btn_just"/>
+
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_map"
+        android:id="@+id/rx_btn_map"/>
+
+
+</LinearLayout>

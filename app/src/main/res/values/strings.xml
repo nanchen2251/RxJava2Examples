@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">RxJava2Examples</string>
+
+
+    <string name="home">主页</string>
+    <string name="rx_create">create</string>
+    <string name="rx_just">just</string>
+    <string name="rx_map">map</string>
+    <string name="rx_zip">zip</string>
+    <string name="rx_flatMap">flatMap</string>
+    <string name="doSomething">doSomething</string>
 </resources>
