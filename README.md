@@ -34,7 +34,7 @@ RxJava 1.x -> RxJava 2.x
 
 ### 尽情地下载运行，开始感受RxJava 2.x 的强大魅力吧~
 
-### 为这个例子pull你的伟大构想，Just to do!
+### 为这个例子pull你的伟大代码，加入分享这个大家庭，Just to do!
 
 
 ### 该例子借鉴了以下项目：
