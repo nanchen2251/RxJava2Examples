@@ -1,5 +1,5 @@
 # RxJava2Examples
-RxJava2 Examples——它可能是从RxJava1跳到RxJava2（学习RxJava2）最好的例子Demo
+### RxJava2 Examples——它可能是从RxJava1跳到RxJava2（学习RxJava2）最好的例子Demo
 
 > RxJava 1.x 到RxJava 2.x的无缝对接  
 无需学习RxJava 1.x,直接学习RxJava 2.x  
@@ -7,7 +7,7 @@ RxJava2 Examples——它可能是从RxJava1跳到RxJava2（学习RxJava2）最�
 支持与Retrofit交互处理示例  
 Activity基类封装处理 
 
-## RxJava 1.x 到 RxJava 2.x 变化一览
+### RxJava 1.x 到 RxJava 2.x 变化一览
 
 RxJava 1.x -> RxJava 2.x
 
@@ -18,7 +18,7 @@ RxJava 1.x -> RxJava 2.x
 * `limit` operator has been removed - Use `take` in RxJava2
 * and much more.
 
-## 一些操作符的解释
+### 一些操作符的解释
 
 * `Map` -> transform the items emitted by an Observable by applying a function to each item
 * `Zip` -> combine the emissions of multiple Observables together via a specified function and emit single items for each combination based on the results of this function
@@ -32,15 +32,15 @@ RxJava 1.x -> RxJava 2.x
 * `Replay` -> ensure that all observers see the same sequence of emitted items, even if they subscribe after the Observable has begun emitting items
 * `Merge` -> combine multiple Observables into one by merging their emissions
 
-## 尽情地下载运行，开始感受RxJava 2.x 的强大魅力吧~
+### 尽情地下载运行，开始感受RxJava 2.x 的强大魅力吧~
 
-## 为这个例子pull你的伟大构想，Just to do!
+### 为这个例子pull你的伟大构想，Just to do!
 
 
-## 该例子借鉴了以下项目：
+### 该例子借鉴了以下项目：
  * [https://github.com/amitshekhariitbhu/RxJava2-Android-Samples](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples) 
 
-## 关于作者
+### 关于作者
     南尘<br>
     四川成都<br>
     [其它开源](https://github.com/nanchen2251/)<br>
