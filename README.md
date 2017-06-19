@@ -34,8 +34,8 @@ RxJava 1.x -> RxJava 2.x
 
 ## 尽情地下载运行，开始感受RxJava 2.x 的强大魅力吧~
 
-## Contributing to RxJava 2 Android Samples
-Just make pull request. You are in!
+## 为这个例子pull你的伟大构想，Just to do!
+
 
 ## 该例子借鉴了以下项目：
  * [https://github.com/amitshekhariitbhu/RxJava2-Android-Samples](https://github.com/amitshekhariitbhu/RxJava2-Android-Samples) 
