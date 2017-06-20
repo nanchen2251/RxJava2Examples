@@ -5,8 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.nanchen.rxjava2examples.base.BaseActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.RxConcatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.RxCreateActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.RxFlatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.RxJustActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.RxMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.RxZipActivity;
 
 import butterknife.OnClick;
 
@@ -40,7 +44,7 @@ public class RxOperatorsActivity extends BaseActivity {
         return false;
     }
 
-    @OnClick({R.id.rx_btn_create, R.id.rx_btn_just,R.id.rx_btn_map})
+    @OnClick({R.id.rx_btn_create, R.id.rx_btn_just, R.id.rx_btn_map, R.id.rx_btn_flatMap,R.id.rx_btn_concatMap, R.id.rx_btn_zip})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rx_btn_create:
@@ -50,7 +54,19 @@ public class RxOperatorsActivity extends BaseActivity {
                 startActivity(new Intent(this, RxJustActivity.class));
                 break;
             case R.id.rx_btn_map:
+                startActivity(new Intent(this, RxMapActivity.class));
+                break;
+            case R.id.rx_btn_flatMap:
+                startActivity(new Intent(this, RxFlatMapActivity.class));
+                break;
+            case R.id.rx_btn_concatMap:
+                startActivity(new Intent(this, RxConcatMapActivity.class));
+                break;
+            case R.id.rx_btn_zip:
+                startActivity(new Intent(this, RxZipActivity.class));
                 break;
         }
     }
+
+
 }

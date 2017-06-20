@@ -8,5 +8,11 @@
     <string name="rx_map">map</string>
     <string name="rx_zip">zip</string>
     <string name="rx_flatMap">flatMap</string>
+    <string name="rx_concatMap">concatMap</string>
+    <string name="rx_filter">filter</string>
+    <string name="rx_take">take</string>
+    <string name="rx_doOnNext">doOnNext</string>
+    <string name="rx_timer">timer</string>
+    <string name="rx_interval">interval</string>
     <string name="doSomething">doSomething</string>
 </resources>

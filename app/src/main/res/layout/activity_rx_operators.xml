@@ -24,5 +24,19 @@
         android:text="@string/rx_map"
         android:id="@+id/rx_btn_map"/>
 
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_flatMap"
+        android:id="@+id/rx_btn_flatMap"/>
+
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_concatMap"
+        android:id="@+id/rx_btn_concatMap"/>
+
+    <Button
+        style="@style/MyBtnStyle"
+        android:text="@string/rx_zip"
+        android:id="@+id/rx_btn_zip"/>
 
 </LinearLayout>

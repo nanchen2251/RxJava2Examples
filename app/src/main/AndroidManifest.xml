@@ -22,13 +22,46 @@
             </intent-filter>
         </activity>
 
-        <!--Create-->
+        <!-- Create -->
         <activity android:name=".module.rxjava2.operators.RxCreateActivity">
         </activity>
 
-        <!--Just-->
+        <!-- Just -->
         <activity android:name=".module.rxjava2.operators.RxJustActivity">
         </activity>
+
+        <!--Map-->
+        <activity android:name=".module.rxjava2.operators.RxMapActivity">
+        </activity>
+
+        <!--FlatMap-->
+        <activity android:name=".module.rxjava2.operators.RxFlatMapActivity">
+        </activity>
+
+        <!--concatMap-->
+        <activity android:name=".module.rxjava2.operators.RxConcatMapActivity">
+        </activity>
+
+        <!--take-->
+        <activity android:name=".module.rxjava2.operators.RxTakeActivity">
+        </activity>
+
+        <!--interval-->
+        <activity android:name=".module.rxjava2.operators.RxIntervalActivity">
+        </activity>
+
+        <!--timer-->
+        <activity android:name=".module.rxjava2.operators.RxTimerActivity">
+        </activity>
+
+        <!--zip-->
+        <activity android:name=".module.rxjava2.operators.RxZipActivity">
+        </activity>
+
+        <!--doOnNext-->
+        <activity android:name=".module.rxjava2.operators.RxDoOnNextActivity">
+        </activity>
+
     </application>
 
 </manifest>
