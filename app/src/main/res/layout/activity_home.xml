@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context="com.nanchen.rxjava2examples.module.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -47,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blue"
+            app:tabIndicatorColor="@android:color/holo_orange_light"
             app:tabTextAppearance="@style/TabLayoutTextStyle"/>
 
     </android.support.design.widget.AppBarLayout>
@@ -63,7 +63,6 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="-100dp"
         android:alpha="0"
         android:elevation="10dp"
         android:gravity="center_vertical"

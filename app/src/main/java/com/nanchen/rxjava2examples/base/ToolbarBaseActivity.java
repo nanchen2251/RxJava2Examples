@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jaeger.library.StatusBarUtil;
 import com.nanchen.rxjava2examples.R;
 
 import butterknife.BindView;
@@ -35,6 +36,7 @@ public abstract class ToolbarBaseActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.blue)); //
         if (getContentViewLayoutID() != 0) {
             initToolbar();
         }

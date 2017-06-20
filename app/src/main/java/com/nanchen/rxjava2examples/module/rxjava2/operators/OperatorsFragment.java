@@ -127,9 +127,9 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
     private void fillData() {
         data = new ArrayList<>();
         data.add(new OperatorModel(getString(R.string.rx_create),"可用于获取一个被观察的对象"));
-        data.add(new OperatorModel(getString(R.string.rx_zip),"合并事件专用" +
-                "分别从两个上游事件中各取出一个组合" +
-                "一个事件只能被使用一次，顺序严格按照事件发送的顺序" +
+        data.add(new OperatorModel(getString(R.string.rx_zip),"合并事件专用," +
+                "分别从两个上游事件中各取出一个组合," +
+                "一个事件只能被使用一次，顺序严格按照事件发送的顺序," +
                 "最终下游事件收到的是和上游事件最少的数目相同（必须两两配对，多余的舍弃)"));
         data.add(new OperatorModel(getString(R.string.rx_map),"基本是RxJava 最简单的操作符了作用是对上游发送的每一个事件应用一个函数，" +
                 "使得每一个事件都按照指定的函数去变化"));

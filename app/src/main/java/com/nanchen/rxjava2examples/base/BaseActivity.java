@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.nanchen.rxjava2examples.R;
 import com.nanchen.rxjava2examples.ui.SystemBarTintManager;
@@ -101,5 +102,16 @@ public abstract class BaseActivity extends AppCompatActivity {
     /** 子类可以重写改变状态栏颜色 */
     protected int setStatusBarColor() {
         return R.color.blue;
+    }
+
+    protected Toast mToast;
+
+    protected void showToast(String desc){
+        if (mToast == null){
+            mToast = Toast.makeText(this.getApplicationContext(),desc,Toast.LENGTH_SHORT);
+        }else{
+            mToast.setText(desc);
+        }
+        mToast.show();;
     }
 }
