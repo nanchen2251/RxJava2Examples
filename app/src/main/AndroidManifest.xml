@@ -62,6 +62,10 @@
         <activity android:name=".module.rxjava2.operators.RxDoOnNextActivity">
         </activity>
 
+        <!--filter-->
+        <activity android:name=".module.rxjava2.operators.RxFilterActivity">
+        </activity>
+
     </application>
 
 </manifest>
