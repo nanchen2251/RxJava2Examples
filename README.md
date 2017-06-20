@@ -7,6 +7,10 @@
 支持与Retrofit交互处理示例  
 Activity基类封装处理 
 
+
+### Just a gif
+![](https://github.com/nanchen2251/RxJava2Examples/blob/master/GIF.gif)
+
 ### RxJava 1.x 到 RxJava 2.x 变化一览
 
 RxJava 1.x -> RxJava 2.x
