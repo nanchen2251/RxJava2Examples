@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2.operators;
+package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
 import android.util.Log;
 
@@ -18,21 +18,18 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
-
 /**
- * flatMap
+ * concatMap
  * <p>
- * FlatMap将一个发送事件的上游Observable变换成多个发送事件的Observables，
- * 然后将它们发射的时间合并后放进一个单独的Observable里
+ * concatMap作用和flatMap几乎一模一样，唯一的区别是它能保证事件的顺序
  * <p>
- * [需要注意]flatMap并不保证事件的顺序
- * <p>
+ *
  * Author: nanchen
  * Email: liushilin520@foxmail.com
- * Date: 2017-06-20  10:06
+ * Date: 2017-06-20  10:27
  */
 
-public class RxFlatMapActivity extends RxOperatorBaseActivity {
+public class RxConcatMapActivity extends RxOperatorBaseActivity {
     private static final String TAG = "RxFlatMapActivity";
 
     @Override
@@ -49,7 +46,7 @@ public class RxFlatMapActivity extends RxOperatorBaseActivity {
                 e.onNext(2);
                 e.onNext(3);
             }
-        }).flatMap(new Function<Integer, ObservableSource<String>>() {
+        }).concatMap(new Function<Integer, ObservableSource<String>>() {
             @Override
             public ObservableSource<String> apply(@NonNull Integer integer) throws Exception {
                 List<String> list = new ArrayList<>();

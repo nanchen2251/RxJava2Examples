@@ -1,11 +1,11 @@
-package com.nanchen.rxjava2examples.module.rxjava2.operators;
+package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.nanchen.rxjava2examples.R;
-import com.nanchen.rxjava2examples.base.BaseActivity;
+import com.nanchen.rxjava2examples.base.ToolbarBaseActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -19,7 +19,7 @@ import butterknife.OnClick;
  * Date: 2017-06-19  17:00
  */
 
-public abstract class RxOperatorBaseActivity extends BaseActivity {
+public abstract class RxOperatorBaseActivity extends ToolbarBaseActivity {
     @BindView(R.id.rx_operators_btn)
     Button mRxOperatorsBtn;
     @BindView(R.id.rx_operators_text)

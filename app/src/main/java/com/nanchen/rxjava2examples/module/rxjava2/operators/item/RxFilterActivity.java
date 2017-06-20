@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2.operators;
+package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
 import com.nanchen.rxjava2examples.R;
 
@@ -10,7 +10,7 @@ import io.reactivex.functions.Predicate;
 /**
  * filter
  * <p>
- * 过滤操作符，取争取的值
+ * 过滤操作符，取正确的值
  * <p>
  * Author: nanchen
  * Email: liushilin520@foxmail.com

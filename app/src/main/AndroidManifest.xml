@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
 
         <!-- 主页面，程序入口 -->
-        <activity android:name=".RxOperatorsActivity">
+        <activity android:name=".module.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -22,48 +22,64 @@
             </intent-filter>
         </activity>
 
+
+        <activity android:name=".module.rxjava2.RxOperatorsActivity">
+        </activity>
+
         <!-- Create -->
-        <activity android:name=".module.rxjava2.operators.RxCreateActivity">
+        <activity android:name=".module.rxjava2.operators.item.RxCreateActivity">
         </activity>
 
         <!-- Just -->
-        <activity android:name=".module.rxjava2.operators.RxJustActivity">
+        <activity android:name=".module.rxjava2.operators.item.RxJustActivity">
         </activity>
 
-        <!--Map-->
-        <activity android:name=".module.rxjava2.operators.RxMapActivity">
+        <!-- Map -->
+        <activity android:name=".module.rxjava2.operators.item.RxMapActivity">
         </activity>
 
-        <!--FlatMap-->
-        <activity android:name=".module.rxjava2.operators.RxFlatMapActivity">
+        <!-- FlatMap -->
+        <activity android:name=".module.rxjava2.operators.item.RxFlatMapActivity">
         </activity>
 
-        <!--concatMap-->
-        <activity android:name=".module.rxjava2.operators.RxConcatMapActivity">
+        <!-- concatMap -->
+        <activity android:name=".module.rxjava2.operators.item.RxConcatMapActivity">
         </activity>
 
-        <!--take-->
-        <activity android:name=".module.rxjava2.operators.RxTakeActivity">
+        <!-- take -->
+        <activity android:name=".module.rxjava2.operators.item.RxTakeActivity">
         </activity>
 
-        <!--interval-->
-        <activity android:name=".module.rxjava2.operators.RxIntervalActivity">
+        <!-- interval -->
+        <activity android:name=".module.rxjava2.operators.item.RxIntervalActivity">
         </activity>
 
-        <!--timer-->
-        <activity android:name=".module.rxjava2.operators.RxTimerActivity">
+        <!-- timer -->
+        <activity android:name=".module.rxjava2.operators.item.RxTimerActivity">
         </activity>
 
-        <!--zip-->
-        <activity android:name=".module.rxjava2.operators.RxZipActivity">
+        <!-- zip -->
+        <activity android:name=".module.rxjava2.operators.item.RxZipActivity">
         </activity>
 
-        <!--doOnNext-->
-        <activity android:name=".module.rxjava2.operators.RxDoOnNextActivity">
+        <!-- doOnNext -->
+        <activity android:name=".module.rxjava2.operators.item.RxDoOnNextActivity">
         </activity>
 
-        <!--filter-->
-        <activity android:name=".module.rxjava2.operators.RxFilterActivity">
+        <!-- filter -->
+        <activity android:name=".module.rxjava2.operators.item.RxFilterActivity">
+        </activity>
+
+        <!-- skip -->
+        <activity android:name=".module.rxjava2.operators.item.RxSkipActivity">
+        </activity>
+
+        <!-- single -->
+        <activity android:name=".module.rxjava2.operators.item.RxSingleActivity">
+        </activity>
+
+        <!--WebView-->
+        <activity android:name=".module.web.WebViewActivity">
         </activity>
 
     </application>

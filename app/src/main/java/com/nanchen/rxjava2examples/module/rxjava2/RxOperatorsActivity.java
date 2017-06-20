@@ -1,16 +1,17 @@
-package com.nanchen.rxjava2examples;
+package com.nanchen.rxjava2examples.module.rxjava2;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.nanchen.rxjava2examples.base.BaseActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxConcatMapActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxCreateActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxFlatMapActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxJustActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxMapActivity;
-import com.nanchen.rxjava2examples.module.rxjava2.operators.RxZipActivity;
+import com.nanchen.rxjava2examples.R;
+import com.nanchen.rxjava2examples.base.ToolbarBaseActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxCreateActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlatMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxZipActivity;
 
 import butterknife.OnClick;
 
@@ -22,7 +23,7 @@ import butterknife.OnClick;
  * Date: 2017-06-19  13:09
  */
 
-public class RxOperatorsActivity extends BaseActivity {
+public class RxOperatorsActivity extends ToolbarBaseActivity {
 
     @Override
     protected int getContentViewLayoutID() {

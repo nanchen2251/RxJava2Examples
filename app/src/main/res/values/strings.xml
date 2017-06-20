@@ -2,7 +2,14 @@
     <string name="app_name">RxJava2Examples</string>
 
 
+    <!--behavior-->
+    <string name="simple_view_behavior">com.nanchen.rxjava2examples.ui.SimpleViewBehavior</string>
+    <string name="translate_up_down_behavior">com.nanchen.rxjava2examples.ui.TranslateUpDownBehavior</string>
+
     <string name="home">主页</string>
+
+    <!--rx-->
+    <string name="doSomething">doSomething</string>
     <string name="rx_create">create</string>
     <string name="rx_just">just</string>
     <string name="rx_map">map</string>
@@ -14,5 +21,7 @@
     <string name="rx_doOnNext">doOnNext</string>
     <string name="rx_timer">timer</string>
     <string name="rx_interval">interval</string>
-    <string name="doSomething">doSomething</string>
+    <string name="rx_single">single</string>
+    <string name="rx_skip">skip</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2.operators;
+package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
 import com.nanchen.rxjava2examples.R;
 
