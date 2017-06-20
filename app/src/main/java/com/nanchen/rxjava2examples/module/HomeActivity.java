@@ -41,9 +41,8 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-
+//        StatusBarUtil.setTranslucent(this);
         initToolBar(mToolbar, false, "");
-
         String []titles = {
                 GlobalConfig.CATEGORY_NAME_OPERATORS,
                 GlobalConfig.CATEGORY_NAME_EXAMPLES

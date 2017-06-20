@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme">
 
         <!-- 主页面，程序入口 -->
-        <activity android:name=".module.HomeActivity">
+        <activity android:name=".module.HomeActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

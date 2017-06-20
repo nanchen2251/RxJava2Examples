@@ -4,13 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context="com.nanchen.rxjava2examples.module.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/home_appbar"
-        android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:theme="@style/AppTheme.AppBarOverlay">
@@ -27,8 +26,8 @@
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/logo"
                 android:scaleType="centerCrop"
+                android:src="@mipmap/logo"
                 app:layout_collapseMode="parallax"
                 app:layout_collapseParallaxMultiplier="0.6"/>
 
@@ -48,7 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/blue"
-            app:tabMode="scrollable"
             app:tabTextAppearance="@style/TabLayoutTextStyle"/>
 
     </android.support.design.widget.AppBarLayout>
@@ -60,6 +58,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <TextView
+        android:fitsSystemWindows="true"
         android:id="@+id/toolbar_title"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
