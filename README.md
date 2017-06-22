@@ -10,8 +10,8 @@ Activity基类封装处理
 ### 关于作者
     南尘<br>
     四川成都<br>
-    [其它开源](https://github.com/nanchen2251/)<br>
-    [博客园](http://www.cnblogs.com/liushilin/)
+    [其它开源](https://github.com/nanchen2251/)<br>
+    [博客园](http://www.cnblogs.com/liushilin/)<br>
     交流群：118116509
 
 ### Just a gif
