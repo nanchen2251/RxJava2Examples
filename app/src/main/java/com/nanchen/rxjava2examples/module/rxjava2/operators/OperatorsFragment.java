@@ -13,6 +13,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.nanchen.rxjava2examples.R;
 import com.nanchen.rxjava2examples.base.BaseFragment;
 import com.nanchen.rxjava2examples.model.OperatorModel;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxAsyncSubjectActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxBehaviorSubjectActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxBufferActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatMapActivity;
@@ -28,12 +30,14 @@ import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLastActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMergeActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxPublishSubjectActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxReduceActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxScanActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSkipActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxTakeActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxTimerActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxWindowActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxZipActivity;
 
 import java.util.ArrayList;
@@ -51,7 +55,6 @@ import butterknife.BindView;
 
 public class OperatorsFragment extends BaseFragment implements OnRefreshListener{
 
-    private OperatorsAdapter mAdapter;
     private List<OperatorModel> data;
 
     @BindView(R.id.operators_recycler)
@@ -68,14 +71,14 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
     @Override
     protected void init() {
         fillData();
-        mAdapter = new OperatorsAdapter(data) {
+        OperatorsAdapter adapter = new OperatorsAdapter(data) {
             @Override
             public void onItemClick(int position) {
                 itemClick(position);
             }
         };
 
-        mAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
+        adapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
 
         mRefreshLayout.setColorSchemeColors(Color.RED, Color.BLUE, Color.GREEN);
         mRefreshLayout.setOnRefreshListener(this);
@@ -85,7 +88,7 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
 
-        mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.setAdapter(adapter);
 
     }
 
@@ -157,6 +160,18 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
             case 21:
                 startActivity(new Intent(getActivity(), RxScanActivity.class));
                 break;
+            case 22:
+                startActivity(new Intent(getActivity(), RxWindowActivity.class));
+                break;
+            case 23:
+                startActivity(new Intent(getActivity(), RxPublishSubjectActivity.class));
+                break;
+            case 24:
+                startActivity(new Intent(getActivity(), RxAsyncSubjectActivity.class));
+                break;
+            case 25:
+                startActivity(new Intent(getActivity(), RxBehaviorSubjectActivity.class));
+                break;
         }
     }
 
@@ -191,6 +206,10 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
         data.add(new OperatorModel(getString(R.string.rx_merge),"将多个Observable合起来，接受可变参数，也支持使用迭代器集合"));
         data.add(new OperatorModel(getString(R.string.rx_reduce),"就是一次用一个方法处理一个值，可以有一个seed作为初始值"));
         data.add(new OperatorModel(getString(R.string.rx_scan),"和上面的reduce差不多，区别在于reduce()只输出结果，而scan()会将过程中每一个结果输出"));
+        data.add(new OperatorModel(getString(R.string.rx_window),"按照时间划分窗口，将数据发送给不同的Observable"));
+        data.add(new OperatorModel(getString(R.string.rx_PublishSubject),"onNext() 会通知每个观察者，仅此而已"));
+        data.add(new OperatorModel(getString(R.string.rx_AsyncSubject),"在调用 onComplete() 之前，除了 subscribe() 其它的操作都会被缓存，在调用 onComplete() 之后只有最后一个 onNext() 会生效"));
+        data.add(new OperatorModel(getString(R.string.rx_BehaviorSubject),"BehaviorSubject 的最后一次 onNext() 操作会被缓存，然后在 subscribe() 后立刻推给新注册的 Observer"));
 
     }
 

@@ -113,6 +113,17 @@
         <!--scan-->
         <activity android:name=".module.rxjava2.operators.item.RxScanActivity"/>
 
+        <!--window-->
+        <activity android:name=".module.rxjava2.operators.item.RxWindowActivity"/>
+
+        <!--PublishSubject-->
+        <activity android:name=".module.rxjava2.operators.item.RxPublishSubjectActivity"/>
+
+        <!--AsyncSubject-->
+        <activity android:name=".module.rxjava2.operators.item.RxAsyncSubjectActivity"/>
+
+        <!--BehaviorSubject-->
+        <activity android:name=".module.rxjava2.operators.item.RxBehaviorSubjectActivity"/>
 
     </application>
 

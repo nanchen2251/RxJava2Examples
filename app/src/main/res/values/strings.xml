@@ -32,5 +32,9 @@
     <string name="rx_merge">merge</string>
     <string name="rx_reduce">reduce</string>
     <string name="rx_scan">scan</string>
+    <string name="rx_window">window</string>
+    <string name="rx_PublishSubject">PublishSubject</string>
+    <string name="rx_AsyncSubject">AsyncSubject</string>
+    <string name="rx_BehaviorSubject">BehaviorSubject</string>
 
 </resources>
