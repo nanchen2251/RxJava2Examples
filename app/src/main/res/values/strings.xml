@@ -23,5 +23,13 @@
     <string name="rx_interval">interval</string>
     <string name="rx_single">single</string>
     <string name="rx_skip">skip</string>
+    <string name="rx_concat">concat</string>
+    <string name="rx_distinct">distinct</string>
+    <string name="rx_buffer">buffer</string>
+    <string name="rx_debounce">debounce</string>
+    <string name="rx_defer">defer</string>
+    <string name="rx_last">last</string>
+    <string name="rx_merge">merge</string>
+    <string name="rx_reduce">reduce</string>
 
 </resources>

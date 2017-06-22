@@ -2,6 +2,7 @@
   <dictionary name="nanchen">
     <words>
       <w>butterknife</w>
+      <w>debounce</w>
       <w>rxjava</w>
     </words>
   </dictionary>

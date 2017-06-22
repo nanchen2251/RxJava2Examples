@@ -79,9 +79,37 @@
         <activity android:name=".module.rxjava2.operators.item.RxSingleActivity">
         </activity>
 
+        <!-- buffer -->
+        <activity android:name=".module.rxjava2.operators.item.RxBufferActivity">
+        </activity>
+
+        <!-- distinct -->
+        <activity android:name=".module.rxjava2.operators.item.RxDistinctActivity">
+        </activity>
+
+        <!-- concat -->
+        <activity android:name=".module.rxjava2.operators.item.RxConcatActivity">
+        </activity>
+
         <!--WebView-->
         <activity android:name=".module.web.WebViewActivity">
         </activity>
+
+        <!--defer-->
+        <activity android:name=".module.rxjava2.operators.item.RxDeferActivity"/>
+
+        <!--reduce-->
+        <activity android:name=".module.rxjava2.operators.item.RxReduceActivity"/>
+
+        <!--debounce-->
+        <activity android:name=".module.rxjava2.operators.item.RxDebounceActivity"/>
+
+        <!--last-->
+        <activity android:name=".module.rxjava2.operators.item.RxLastActivity"/>
+
+        <!--merge-->
+        <activity android:name=".module.rxjava2.operators.item.RxMergeActivity"/>
+
 
     </application>
 

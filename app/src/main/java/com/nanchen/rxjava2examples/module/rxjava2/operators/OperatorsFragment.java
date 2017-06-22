@@ -13,14 +13,22 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.nanchen.rxjava2examples.R;
 import com.nanchen.rxjava2examples.base.BaseFragment;
 import com.nanchen.rxjava2examples.model.OperatorModel;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxBufferActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxCreateActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDebounceActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDeferActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDistinctActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDoOnNextActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFilterActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxIntervalActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLastActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMergeActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxReduceActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSkipActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxTakeActivity;
@@ -121,6 +129,30 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
             case 12:
                 startActivity(new Intent(getActivity(), RxSingleActivity.class));
                 break;
+            case 13:
+                startActivity(new Intent(getActivity(), RxConcatActivity.class));
+                break;
+            case 14:
+                startActivity(new Intent(getActivity(), RxDistinctActivity.class));
+                break;
+            case 15:
+                startActivity(new Intent(getActivity(), RxBufferActivity.class));
+                break;
+            case 16:
+                startActivity(new Intent(getActivity(), RxDebounceActivity.class));
+                break;
+            case 17:
+                startActivity(new Intent(getActivity(), RxDeferActivity.class));
+                break;
+            case 18:
+                startActivity(new Intent(getActivity(), RxLastActivity.class));
+                break;
+            case 19:
+                startActivity(new Intent(getActivity(), RxMergeActivity.class));
+                break;
+            case 20:
+                startActivity(new Intent(getActivity(), RxReduceActivity.class));
+                break;
         }
     }
 
@@ -146,7 +178,14 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
         data.add(new OperatorModel(getString(R.string.rx_just),"just操作符，和RxJava 1.x 没有什么区别，就是接受一个可变参数，依次发送"));
         data.add(new OperatorModel(getString(R.string.rx_single),"顾名思义，Single只会接收一个参数" +
                 "而SingleObserver只会调用onError或者onSuccess"));
-
+        data.add(new OperatorModel(getString(R.string.rx_concat),"连接操作符，可接受Observable的可变参数，或者Observable的集合"));
+        data.add(new OperatorModel(getString(R.string.rx_distinct),"去重操作符，其实就是简单的去重"));
+        data.add(new OperatorModel(getString(R.string.rx_buffer),"buffer(count, skip)` 从定义就差不多能看出作用了，将 observable 中的数据按 skip（步长）分成最长不超过 count 的 buffer，然后生成一个 observable"));
+        data.add(new OperatorModel(getString(R.string.rx_debounce),"过滤掉发射速率过快的数据项"));
+        data.add(new OperatorModel(getString(R.string.rx_defer),"就是在每次订阅的时候就会创建一个新的 Observable"));
+        data.add(new OperatorModel(getString(R.string.rx_last),"取出最后一个值，参数是没有值的时候的默认值"));
+        data.add(new OperatorModel(getString(R.string.rx_merge),"将多个Observable合起来，接受可变参数，也支持使用迭代器集合"));
+        data.add(new OperatorModel(getString(R.string.rx_reduce),"就是一次用一个方法处理一个值，可以有一个seed作为初始值"));
 
     }
 
