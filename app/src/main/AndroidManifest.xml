@@ -125,6 +125,12 @@
         <!--BehaviorSubject-->
         <activity android:name=".module.rxjava2.operators.item.RxBehaviorSubjectActivity"/>
 
+        <!--Completable-->
+        <activity android:name=".module.rxjava2.operators.item.RxCompletableActivity"/>
+
+        <!--Flowable-->
+        <activity android:name=".module.rxjava2.operators.item.RxFlowableActivity"/>
+
     </application>
 
 </manifest>

@@ -16,6 +16,7 @@ import com.nanchen.rxjava2examples.model.OperatorModel;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxAsyncSubjectActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxBehaviorSubjectActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxBufferActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxCompletableActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxConcatMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxCreateActivity;
@@ -25,6 +26,7 @@ import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDistinctActiv
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxDoOnNextActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFilterActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlatMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxFlowableActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxIntervalActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxJustActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLastActivity;
@@ -172,6 +174,12 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
             case 25:
                 startActivity(new Intent(getActivity(), RxBehaviorSubjectActivity.class));
                 break;
+            case 26:
+                startActivity(new Intent(getActivity(), RxCompletableActivity.class));
+                break;
+            case 27:
+                startActivity(new Intent(getActivity(), RxFlowableActivity.class));
+                break;
         }
     }
 
@@ -210,6 +218,8 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
         data.add(new OperatorModel(getString(R.string.rx_PublishSubject),"onNext() 会通知每个观察者，仅此而已"));
         data.add(new OperatorModel(getString(R.string.rx_AsyncSubject),"在调用 onComplete() 之前，除了 subscribe() 其它的操作都会被缓存，在调用 onComplete() 之后只有最后一个 onNext() 会生效"));
         data.add(new OperatorModel(getString(R.string.rx_BehaviorSubject),"BehaviorSubject 的最后一次 onNext() 操作会被缓存，然后在 subscribe() 后立刻推给新注册的 Observer"));
+        data.add(new OperatorModel(getString(R.string.rx_Completable),"只关心结果，也就是说 Completable 是没有 onNext 的，要么成功要么出错，不关心过程，在 subscribe 后的某个时间点返回结果"));
+        data.add(new OperatorModel(getString(R.string.rx_Flowable),"专用于解决背压问题"));
 
     }
 
