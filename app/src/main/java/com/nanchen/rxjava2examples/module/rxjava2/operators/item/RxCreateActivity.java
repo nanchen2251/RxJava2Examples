@@ -14,6 +14,8 @@ import io.reactivex.disposables.Disposable;
 /**
  * create
  * <p>
+ * 最常见的操作符，用于生产一个发射对象
+ *
  * Author: nanchen
  * Email: liushilin520@foxmail.com
  * Date: 2017-06-19  17:06

@@ -76,13 +76,13 @@ public class RxZipActivity extends RxOperatorBaseActivity {
                 if (!e.isDisposed()) {
                     e.onNext(1);
                     mRxOperatorsText.append("Integer emit : 1 \n");
-                    Log.e(TAG, "Integer emit : 1 \n" );
+                    Log.e(TAG, "Integer emit : 1 \n");
                     e.onNext(2);
                     mRxOperatorsText.append("Integer emit : 2 \n");
                     Log.e(TAG, "Integer emit : 2 \n");
                     e.onNext(3);
                     mRxOperatorsText.append("Integer emit : 3 \n");
-                    Log.e(TAG, "Integer emit : 3 \n" );
+                    Log.e(TAG, "Integer emit : 3 \n");
                     e.onNext(4);
                     mRxOperatorsText.append("Integer emit : 4 \n");
                     Log.e(TAG, "Integer emit : 4 \n");

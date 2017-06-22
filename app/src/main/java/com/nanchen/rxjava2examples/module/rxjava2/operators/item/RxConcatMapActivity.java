@@ -30,11 +30,11 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class RxConcatMapActivity extends RxOperatorBaseActivity {
-    private static final String TAG = "RxFlatMapActivity";
+    private static final String TAG = "RxConcatMapActivity";
 
     @Override
     protected String getSubTitle() {
-        return getString(R.string.rx_flatMap);
+        return getString(R.string.rx_concatMap);
     }
 
     @Override
@@ -61,8 +61,8 @@ public class RxConcatMapActivity extends RxOperatorBaseActivity {
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(@NonNull String s) throws Exception {
-                        Log.e(TAG, "flatMap : accept : " + s + "\n");
-                        mRxOperatorsText.append("flatMap : accept : " + s + "\n");
+                        Log.e(TAG, "concatMap : accept : " + s + "\n");
+                        mRxOperatorsText.append("concatMap : accept : " + s + "\n");
                     }
                 });
     }
