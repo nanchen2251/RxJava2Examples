@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -20,6 +22,8 @@ import io.reactivex.schedulers.Schedulers;
 
 public class RxJustActivity extends RxOperatorBaseActivity {
 
+    private static final String TAG = "RxJustActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_just);
@@ -38,6 +42,7 @@ public class RxJustActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull String s) throws Exception {
                         mRxOperatorsText.append("accept : onNext : " + s + "\n");
+                        Log.e(TAG,"accept : onNext : " + s + "\n" );
                     }
                 });
     }

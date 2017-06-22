@@ -110,6 +110,9 @@
         <!--merge-->
         <activity android:name=".module.rxjava2.operators.item.RxMergeActivity"/>
 
+        <!--scan-->
+        <activity android:name=".module.rxjava2.operators.item.RxScanActivity"/>
+
 
     </application>
 

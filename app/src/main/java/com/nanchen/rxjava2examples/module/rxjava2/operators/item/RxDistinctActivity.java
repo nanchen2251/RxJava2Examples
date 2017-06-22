@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -17,6 +19,7 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxDistinctActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxDistinctActivity";
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_distinct);
@@ -30,6 +33,7 @@ public class RxDistinctActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull Integer integer) throws Exception {
                         mRxOperatorsText.append("distinct : " + integer + "\n");
+                        Log.e(TAG, "distinct : " + integer + "\n");
                     }
                 });
     }

@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import java.util.List;
@@ -20,6 +22,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxBufferActivity extends RxOperatorBaseActivity {
+
+    private static final String TAG = "RxBufferActivity";
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_buffer);
@@ -33,11 +37,15 @@ public class RxBufferActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull List<Integer> integers) throws Exception {
                         mRxOperatorsText.append("buffer size : " + integers.size() + "\n");
+                        Log.e(TAG, "buffer size : " + integers.size() + "\n");
                         mRxOperatorsText.append("buffer value : ");
+                        Log.e(TAG, "buffer value : " );
                         for (Integer i : integers) {
                             mRxOperatorsText.append(i + "");
+                            Log.e(TAG, i + "");
                         }
                         mRxOperatorsText.append("\n");
+                        Log.e(TAG, "\n");
                     }
                 });
     }

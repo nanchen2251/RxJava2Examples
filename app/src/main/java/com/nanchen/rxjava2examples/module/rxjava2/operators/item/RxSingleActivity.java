@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import java.util.Random;
@@ -21,6 +23,8 @@ import io.reactivex.disposables.Disposable;
  */
 
 public class RxSingleActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxSingleActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_single);
@@ -38,11 +42,13 @@ public class RxSingleActivity extends RxOperatorBaseActivity {
                     @Override
                     public void onSuccess(@NonNull Integer integer) {
                         mRxOperatorsText.append("single : onSuccess : "+integer+"\n");
+                        Log.e(TAG, "single : onSuccess : "+integer+"\n" );
                     }
 
                     @Override
                     public void onError(@NonNull Throwable e) {
                         mRxOperatorsText.append("single : onError : "+e.getMessage()+"\n");
+                        Log.e(TAG, "single : onError : "+e.getMessage()+"\n");
                     }
                 });
 

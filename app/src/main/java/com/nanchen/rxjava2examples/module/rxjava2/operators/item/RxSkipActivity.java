@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -17,6 +19,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxSkipActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxSkipActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_skip);
@@ -30,6 +34,7 @@ public class RxSkipActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull Integer integer) throws Exception {
                         mRxOperatorsText.append("skip : "+integer + "\n");
+                        Log.e(TAG, "skip : "+integer + "\n");
                     }
                 });
     }

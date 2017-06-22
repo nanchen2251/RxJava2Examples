@@ -31,5 +31,6 @@
     <string name="rx_last">last</string>
     <string name="rx_merge">merge</string>
     <string name="rx_reduce">reduce</string>
+    <string name="rx_scan">scan</string>
 
 </resources>

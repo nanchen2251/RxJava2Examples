@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import java.util.concurrent.TimeUnit;
@@ -19,6 +21,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxIntervalActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxIntervalActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_interval);
@@ -31,6 +35,7 @@ public class RxIntervalActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull Long aLong) throws Exception {
                         mRxOperatorsText.append("interval : "+aLong + "\n");
+                        Log.e(TAG, "interval : "+aLong + "\n" );
                     }
                 });
     }

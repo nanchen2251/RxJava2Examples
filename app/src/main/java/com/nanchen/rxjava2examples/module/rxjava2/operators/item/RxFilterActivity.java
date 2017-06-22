@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -18,6 +20,8 @@ import io.reactivex.functions.Predicate;
  */
 
 public class RxFilterActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxFilterActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_filter);
@@ -35,6 +39,7 @@ public class RxFilterActivity extends RxOperatorBaseActivity {
             @Override
             public void accept(@NonNull Integer integer) throws Exception {
                 mRxOperatorsText.append("filter : " + integer + "\n");
+                Log.e(TAG, "filter : " + integer + "\n");
             }
         });
     }

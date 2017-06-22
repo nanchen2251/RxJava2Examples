@@ -29,6 +29,7 @@ import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxLastActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMapActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxMergeActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxReduceActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxScanActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxSkipActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.item.RxTakeActivity;
@@ -153,6 +154,9 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
             case 20:
                 startActivity(new Intent(getActivity(), RxReduceActivity.class));
                 break;
+            case 21:
+                startActivity(new Intent(getActivity(), RxScanActivity.class));
+                break;
         }
     }
 
@@ -186,6 +190,7 @@ public class OperatorsFragment extends BaseFragment implements OnRefreshListener
         data.add(new OperatorModel(getString(R.string.rx_last),"取出最后一个值，参数是没有值的时候的默认值"));
         data.add(new OperatorModel(getString(R.string.rx_merge),"将多个Observable合起来，接受可变参数，也支持使用迭代器集合"));
         data.add(new OperatorModel(getString(R.string.rx_reduce),"就是一次用一个方法处理一个值，可以有一个seed作为初始值"));
+        data.add(new OperatorModel(getString(R.string.rx_scan),"和上面的reduce差不多，区别在于reduce()只输出结果，而scan()会将过程中每一个结果输出"));
 
     }
 

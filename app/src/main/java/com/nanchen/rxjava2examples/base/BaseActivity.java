@@ -104,7 +104,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         return R.color.blue;
     }
 
-    protected Toast mToast;
+    private Toast mToast;
 
     protected void showToast(String desc){
         if (mToast == null){
@@ -112,6 +112,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         }else{
             mToast.setText(desc);
         }
-        mToast.show();;
+        mToast.show();
     }
 }

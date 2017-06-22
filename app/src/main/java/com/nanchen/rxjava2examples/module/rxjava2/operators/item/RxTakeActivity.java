@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Flowable;
@@ -18,6 +20,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxTakeActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxTakeActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_take);
@@ -31,6 +35,7 @@ public class RxTakeActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull Integer integer) throws Exception {
                         mRxOperatorsText.append("take : "+integer + "\n");
+                        Log.e(TAG, "accept: take : "+integer + "\n" );
                     }
                 });
     }

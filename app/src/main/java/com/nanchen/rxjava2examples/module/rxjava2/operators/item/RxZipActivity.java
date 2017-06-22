@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -24,6 +26,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxZipActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxZipActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_zip);
@@ -40,6 +44,7 @@ public class RxZipActivity extends RxOperatorBaseActivity {
             @Override
             public void accept(@NonNull String s) throws Exception {
                 mRxOperatorsText.append("zip : accept : " + s + "\n");
+                Log.e(TAG, "zip : accept : " + s + "\n");
             }
         });
 
@@ -52,10 +57,13 @@ public class RxZipActivity extends RxOperatorBaseActivity {
                 if (!e.isDisposed()) {
                     e.onNext("A");
                     mRxOperatorsText.append("String emit : A \n");
+                    Log.e(TAG, "String emit : A \n");
                     e.onNext("B");
                     mRxOperatorsText.append("String emit : B \n");
+                    Log.e(TAG, "String emit : B \n");
                     e.onNext("C");
                     mRxOperatorsText.append("String emit : C \n");
+                    Log.e(TAG, "String emit : C \n");
                 }
             }
         });
@@ -68,14 +76,19 @@ public class RxZipActivity extends RxOperatorBaseActivity {
                 if (!e.isDisposed()) {
                     e.onNext(1);
                     mRxOperatorsText.append("Integer emit : 1 \n");
+                    Log.e(TAG, "Integer emit : 1 \n" );
                     e.onNext(2);
                     mRxOperatorsText.append("Integer emit : 2 \n");
+                    Log.e(TAG, "Integer emit : 2 \n");
                     e.onNext(3);
                     mRxOperatorsText.append("Integer emit : 3 \n");
+                    Log.e(TAG, "Integer emit : 3 \n" );
                     e.onNext(4);
                     mRxOperatorsText.append("Integer emit : 4 \n");
+                    Log.e(TAG, "Integer emit : 4 \n");
                     e.onNext(5);
                     mRxOperatorsText.append("Integer emit : 5 \n");
+                    Log.e(TAG, "Integer emit : 5 \n");
                 }
             }
         });

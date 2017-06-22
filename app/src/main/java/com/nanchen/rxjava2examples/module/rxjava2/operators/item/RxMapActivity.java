@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -22,6 +24,7 @@ import io.reactivex.functions.Function;
  */
 
 public class RxMapActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxMapActivity";
 
     @Override
     protected String getSubTitle() {
@@ -46,6 +49,7 @@ public class RxMapActivity extends RxOperatorBaseActivity {
             @Override
             public void accept(@NonNull String s) throws Exception {
                 mRxOperatorsText.append("accept : " + s +"\n");
+                Log.e(TAG, "accept : " + s +"\n" );
             }
         });
     }

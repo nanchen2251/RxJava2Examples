@@ -1,5 +1,7 @@
 package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 
+import android.util.Log;
+
 import com.nanchen.rxjava2examples.R;
 
 import io.reactivex.Observable;
@@ -17,6 +19,8 @@ import io.reactivex.functions.Consumer;
  */
 
 public class RxDoOnNextActivity extends RxOperatorBaseActivity {
+    private static final String TAG = "RxDoOnNextActivity";
+
     @Override
     protected String getSubTitle() {
         return getString(R.string.rx_doOnNext);
@@ -29,11 +33,13 @@ public class RxDoOnNextActivity extends RxOperatorBaseActivity {
                     @Override
                     public void accept(@NonNull Integer integer) throws Exception {
                         mRxOperatorsText.append("doOnNext 保存 " + integer + "成功" + "\n");
+                        Log.e(TAG, "doOnNext 保存 " + integer + "成功" + "\n");
                     }
                 }).subscribe(new Consumer<Integer>() {
             @Override
             public void accept(@NonNull Integer integer) throws Exception {
                 mRxOperatorsText.append("doOnNext :" + integer + "\n");
+                Log.e(TAG, "doOnNext :" + integer + "\n");
             }
         });
     }
