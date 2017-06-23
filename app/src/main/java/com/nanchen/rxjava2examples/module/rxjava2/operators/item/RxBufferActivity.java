@@ -32,7 +32,7 @@ public class RxBufferActivity extends RxOperatorBaseActivity {
     @Override
     protected void doSomething() {
         Observable.just(1, 2, 3, 4, 5)
-                .buffer(3, 1)
+                .buffer(3, 2)
                 .subscribe(new Consumer<List<Integer>>() {
                     @Override
                     public void accept(@NonNull List<Integer> integers) throws Exception {

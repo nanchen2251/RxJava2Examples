@@ -3,12 +3,15 @@ package com.nanchen.rxjava2examples.module.rxjava2.operators.item;
 import android.util.Log;
 
 import com.nanchen.rxjava2examples.R;
+import com.nanchen.rxjava2examples.util.TimeUtil;
 
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * timer
@@ -32,14 +35,19 @@ public class RxTimerActivity extends RxOperatorBaseActivity {
 
     @Override
     protected void doSomething() {
-        Observable.timer(2, TimeUnit.MILLISECONDS)
+        mRxOperatorsText.append("timer start : " + TimeUtil.getNowStrTime() + "\n");
+        Log.e(TAG, "timer start : " + TimeUtil.getNowStrTime() + "\n");
+        Observable.timer(2, TimeUnit.SECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<Long>() {
                     @Override
                     public void accept(@NonNull Long aLong) throws Exception {
-                        mRxOperatorsText.append("timer :" + aLong + "\n");
-                        Log.e(TAG, "timer :" + aLong + "\n");
+                        mRxOperatorsText.append("timer :" + aLong + " at " + TimeUtil.getNowStrTime() + "\n");
+                        Log.e(TAG, "timer :" + aLong + " at " + TimeUtil.getNowStrTime() + "\n");
                     }
                 });
     }
+
 
 }
