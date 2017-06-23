@@ -7,6 +7,11 @@
 支持与Retrofit交互处理示例  
 Activity基类封装处理 
 
+### 文章链接：
+[这可能是最好的RxJava 2.x 入门教程（一）](http://www.jianshu.com/p/a93c79e9f689)
+[这可能是最好的RxJava 2.x 入门教程（二）](http://www.jianshu.com/p/b39afa92807e)
+[这可能是最好的RxJava 2.x 入门教程（三）](http://www.jianshu.com/p/e9c79eacc8e3)
+
 ### 关于作者
     南尘<br>
     四川成都<br>
