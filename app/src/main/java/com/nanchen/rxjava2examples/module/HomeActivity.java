@@ -15,6 +15,7 @@ import com.nanchen.rxjava2examples.base.BaseActivity;
 import com.nanchen.rxjava2examples.base.BaseViewPagerAdapter;
 import com.nanchen.rxjava2examples.constant.GlobalConfig;
 import com.nanchen.rxjava2examples.module.rxjava2.operators.OperatorsFragment;
+import com.nanchen.rxjava2examples.module.rxjava2.usecases.UseCasesFragment;
 import com.nanchen.rxjava2examples.module.web.WebViewActivity;
 import com.nanchen.rxjava2examples.util.ScreenUtil;
 
@@ -61,7 +62,7 @@ public class HomeActivity extends BaseActivity {
 
         BaseViewPagerAdapter pagerAdapter = new BaseViewPagerAdapter(getSupportFragmentManager(),titles);
         pagerAdapter.addFragment(new OperatorsFragment());
-        pagerAdapter.addFragment(new OperatorsFragment());
+        pagerAdapter.addFragment(new UseCasesFragment());
 
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);

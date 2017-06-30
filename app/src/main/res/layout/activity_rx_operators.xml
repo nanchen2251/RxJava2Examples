@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.nanchen.rxjava2examples.module.rxjava2.RxOperatorsActivity">
+    tools:context="com.nanchen.rxjava2examples.module.rxjava2.operators.RxOperatorsActivity">
 
     <include layout="@layout/layout_toolbar"/>
 

@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2;
+package com.nanchen.rxjava2examples.module.rxjava2.operators;
 
 import android.content.Intent;
 import android.os.Bundle;

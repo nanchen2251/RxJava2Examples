@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,17 +15,16 @@
         android:theme="@style/AppTheme">
 
         <!-- 主页面，程序入口 -->
-        <activity android:name=".module.HomeActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".module.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".module.rxjava2.RxOperatorsActivity">
+        <activity android:name=".module.rxjava2.operators.RxOperatorsActivity">
         </activity>
 
         <!-- Create -->
@@ -91,46 +91,49 @@
         <activity android:name=".module.rxjava2.operators.item.RxConcatActivity">
         </activity>
 
-        <!--WebView-->
+        <!-- WebView -->
         <activity android:name=".module.web.WebViewActivity">
         </activity>
 
-        <!--defer-->
+        <!-- defer -->
         <activity android:name=".module.rxjava2.operators.item.RxDeferActivity"/>
 
-        <!--reduce-->
+        <!-- reduce -->
         <activity android:name=".module.rxjava2.operators.item.RxReduceActivity"/>
 
-        <!--debounce-->
+        <!-- debounce -->
         <activity android:name=".module.rxjava2.operators.item.RxDebounceActivity"/>
 
-        <!--last-->
+        <!-- last -->
         <activity android:name=".module.rxjava2.operators.item.RxLastActivity"/>
 
-        <!--merge-->
+        <!-- merge -->
         <activity android:name=".module.rxjava2.operators.item.RxMergeActivity"/>
 
-        <!--scan-->
+        <!-- scan -->
         <activity android:name=".module.rxjava2.operators.item.RxScanActivity"/>
 
-        <!--window-->
+        <!-- window -->
         <activity android:name=".module.rxjava2.operators.item.RxWindowActivity"/>
 
-        <!--PublishSubject-->
+        <!-- PublishSubject -->
         <activity android:name=".module.rxjava2.operators.item.RxPublishSubjectActivity"/>
 
-        <!--AsyncSubject-->
+        <!-- AsyncSubject -->
         <activity android:name=".module.rxjava2.operators.item.RxAsyncSubjectActivity"/>
 
-        <!--BehaviorSubject-->
+        <!-- BehaviorSubject -->
         <activity android:name=".module.rxjava2.operators.item.RxBehaviorSubjectActivity"/>
 
-        <!--Completable-->
+        <!-- Completable -->
         <activity android:name=".module.rxjava2.operators.item.RxCompletableActivity"/>
 
-        <!--Flowable-->
+        <!-- Flowable -->
         <activity android:name=".module.rxjava2.operators.item.RxFlowableActivity"/>
-
+        <activity android:name=".module.rxjava2.usecases.RxNetSingleActivity">
+        </activity>
+        <activity android:name=".module.rxjava2.usecases.FastNetwork.RxNetworkActivity">
+        </activity>
     </application>
 
 </manifest>

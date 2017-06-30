@@ -21,9 +21,9 @@ import butterknife.OnClick;
 
 public abstract class RxOperatorBaseActivity extends ToolbarBaseActivity {
     @BindView(R.id.rx_operators_btn)
-    Button mRxOperatorsBtn;
+    protected Button mRxOperatorsBtn;
     @BindView(R.id.rx_operators_text)
-    TextView mRxOperatorsText;
+    protected TextView mRxOperatorsText;
 
     @Override
     protected int getContentViewLayoutID() {
