@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2.usecases.FastNetwork;
+package com.nanchen.rxjava2examples.module.rxjava2.usecases.fastNetwork;
 
 import android.util.Log;
 
@@ -13,8 +13,18 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
-public class RxNetworkActivity extends RxOperatorBaseActivity {
 
+/**
+ * Rx2AndroidNetworking
+ *
+ * 仅仅是采用这个框架做 rx2 网络请求
+ *
+ * Author: nanchen
+ * Email: liushilin520@foxmail.com
+ * Date: 2017-06-30  15:41
+ */
+
+public class RxNetworkActivity extends RxOperatorBaseActivity {
 
     private static final String TAG = "RxNetworkActivity";
 

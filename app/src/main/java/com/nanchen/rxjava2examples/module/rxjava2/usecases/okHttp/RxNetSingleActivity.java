@@ -1,4 +1,4 @@
-package com.nanchen.rxjava2examples.module.rxjava2.usecases;
+package com.nanchen.rxjava2examples.module.rxjava2.usecases.okHttp;
 
 import android.util.Log;
 
@@ -20,6 +20,21 @@ import okhttp3.Request;
 import okhttp3.Request.Builder;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+
+/**
+ *
+ * 采用 OkHttp3 配合 map , doOnNext , 线程切换做简单的网络请求
+ *
+ * 1、通过 Observable.create() 方法，调用 OkHttp 网络请求;
+ * 2、通过 map 操作符结合 Gson , 将 Response 转换为 bean 类;
+ * 3、通过 doOnNext() 方法，解析 bean 中的数据，并进行数据库存储等操作;
+ * 4、调度线程，在子线程进行耗时操作任务，在主线程更新 UI;
+ * 5、通过 subscribe(),根据请求成功或者失败来更新 UI。
+ *
+ * Author: nanchen
+ * Email: liushilin520@foxmail.com
+ * Date: 2017-06-30  14:24
+ */
 
 public class RxNetSingleActivity extends RxOperatorBaseActivity {
     private static final String TAG = "RxNetSingleActivity";

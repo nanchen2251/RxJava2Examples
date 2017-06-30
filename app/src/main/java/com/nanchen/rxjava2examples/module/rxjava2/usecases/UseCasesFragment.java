@@ -4,7 +4,9 @@ import android.content.Intent;
 
 import com.nanchen.rxjava2examples.model.OperatorModel;
 import com.nanchen.rxjava2examples.module.rxjava2.CategoryBaseFragment;
-import com.nanchen.rxjava2examples.module.rxjava2.usecases.FastNetwork.RxNetworkActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.usecases.fastNetwork.RxNetworkActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.usecases.okHttp.RxNetSingleActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.usecases.zip.RxCaseZipActivity;
 
 import java.util.ArrayList;
 
@@ -30,6 +32,8 @@ public class UseCasesFragment extends CategoryBaseFragment {
         data.add(new OperatorModel("使用框架 rx2-Networking",
                 "1、通过 Rx2AndroidNetworking 的 get() 方法获取 Observable 对象(已解析)；\n" +
                         "2、调度线程，根据请求结果更新 UI。"));
+        data.add(new OperatorModel("集合多个接口的数据再更新 UI",
+                "zip 操作符可以把多个 Observable 的数据接口成一个数据源再发出去"));
     }
 
     @Override
@@ -40,6 +44,9 @@ public class UseCasesFragment extends CategoryBaseFragment {
                 break;
             case 1:
                 startActivity(new Intent(getActivity(), RxNetworkActivity.class));
+                break;
+            case 2:
+                startActivity(new Intent(getActivity(), RxCaseZipActivity.class));
                 break;
         }
     }

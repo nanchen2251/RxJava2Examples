@@ -24,6 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--操作符-->
         <activity android:name=".module.rxjava2.operators.RxOperatorsActivity">
         </activity>
 
@@ -92,8 +94,7 @@
         </activity>
 
         <!-- WebView -->
-        <activity android:name=".module.web.WebViewActivity">
-        </activity>
+        <activity android:name=".module.web.WebViewActivity"/>
 
         <!-- defer -->
         <activity android:name=".module.rxjava2.operators.item.RxDeferActivity"/>
@@ -130,10 +131,16 @@
 
         <!-- Flowable -->
         <activity android:name=".module.rxjava2.operators.item.RxFlowableActivity"/>
-        <activity android:name=".module.rxjava2.usecases.RxNetSingleActivity">
-        </activity>
-        <activity android:name=".module.rxjava2.usecases.FastNetwork.RxNetworkActivity">
-        </activity>
+
+        <!--simple networking-->
+        <activity android:name=".module.rxjava2.usecases.okHttp.RxNetSingleActivity"/>
+
+        <!--rx-networking-->
+        <activity android:name=".module.rxjava2.usecases.fastNetwork.RxNetworkActivity"/>
+
+        <!--多个网络接口数据合并后再更新UI-->
+        <activity android:name=".module.rxjava2.usecases.zip.RxCaseZipActivity"/>
+
     </application>
 
 </manifest>
