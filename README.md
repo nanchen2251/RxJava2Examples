@@ -8,10 +8,13 @@
 Activity基类封装处理 
 
 ### 文章链接：
+[这可能是最好的RxJava 2.x 入门教程（完结版）](http://www.apkbus.com/blog-898535-68185.html)<br>
 [这可能是最好的RxJava 2.x 入门教程（一）](http://www.jianshu.com/p/a93c79e9f689)<br>
 [这可能是最好的RxJava 2.x 入门教程（二）](http://www.jianshu.com/p/b39afa92807e)<br>
 [这可能是最好的RxJava 2.x 入门教程（三）](http://www.jianshu.com/p/e9c79eacc8e3)<br>
 [这可能是最好的RxJava 2.x 入门教程（四）](http://www.jianshu.com/p/c08bfc58f4b6)<br>
+[这可能是最好的RxJava 2.x 入门教程（五）](http://www.jianshu.com/p/81fac37430dd)<br>
+
 
 ### 关于作者
     南尘<br>
