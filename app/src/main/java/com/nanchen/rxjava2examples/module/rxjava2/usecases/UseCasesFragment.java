@@ -4,6 +4,7 @@ import android.content.Intent;
 
 import com.nanchen.rxjava2examples.model.OperatorModel;
 import com.nanchen.rxjava2examples.module.rxjava2.CategoryBaseFragment;
+import com.nanchen.rxjava2examples.module.rxjava2.Thread.RxThreadActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.concat.RxCaseConcatActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.debounce.RxCaseDebounceActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.fastNetwork.RxNetworkActivity;
@@ -52,7 +53,13 @@ public class UseCasesFragment extends CategoryBaseFragment {
         data.add(new OperatorModel("间隔任务实现心跳",
                 "可能我们会遇上各种即时通讯，如果是自己家开发的 IM 即时通讯，我相信在移动端一定少不了心跳包的管理，" +
                         "而我们 RxJava 2.x 的 interval 操作符棒我们解决了这个问题。"));
+        data.add(new OperatorModel("线程调度需要注意的",
+                "RxJava 内置的线程调度器的确可以让我们的线程切换得心应手，但其中也有些需要注意的地方。\n" +
+                        "- 简单地说，subscribeOn() 指定的就是发射事件的线程，observerOn指定的就是订阅者接收事件的线程。\n" +
+                        "- 多次指定发射事件的线程只有第一次指定的有效，也就是说多次调用 subscribeOn() 只有第一次的有效，其余的会被忽略。\n" +
+                        "- 但多次指定订阅者接收线程是可以的，也就是说每调用一次 observerOn()，下游的线程就会切换一次。"));
     }
+
 
     @Override
     protected void itemClick(int position) {
@@ -77,6 +84,9 @@ public class UseCasesFragment extends CategoryBaseFragment {
                 break;
             case 6:
                 startActivity(new Intent(getActivity(), RxCaseIntervalActivity.class));
+                break;
+            case 7:
+                startActivity(new Intent(getActivity(), RxThreadActivity.class));
                 break;
         }
     }
