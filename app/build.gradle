@@ -38,4 +38,5 @@ dependencies {
     compile 'com.amitshekhar.android:rx2-android-networking:1.0.0'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }

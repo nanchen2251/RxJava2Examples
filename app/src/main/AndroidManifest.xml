@@ -141,6 +141,11 @@
         <!--多个网络接口数据合并后再更新UI-->
         <activity android:name=".module.rxjava2.usecases.zip.RxCaseZipActivity"/>
 
+        <!--多个网络请求依次依赖-->
+        <activity android:name=".module.rxjava2.usecases.flatMap.RxCaseFlatMapActivity"/>
+        <activity android:name=".module.rxjava2.usecases.concat.RxCaseConcatActivity"/>
+        <activity android:name=".module.rxjava2.usecases.debounce.RxCaseDebounceActivity"/>
+
     </application>
 
 </manifest>
