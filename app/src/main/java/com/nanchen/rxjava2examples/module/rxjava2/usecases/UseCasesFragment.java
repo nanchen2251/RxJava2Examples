@@ -8,6 +8,7 @@ import com.nanchen.rxjava2examples.module.rxjava2.usecases.concat.RxCaseConcatAc
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.debounce.RxCaseDebounceActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.fastNetwork.RxNetworkActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.flatMap.RxCaseFlatMapActivity;
+import com.nanchen.rxjava2examples.module.rxjava2.usecases.interval.RxCaseIntervalActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.okHttp.RxNetSingleActivity;
 import com.nanchen.rxjava2examples.module.rxjava2.usecases.zip.RxCaseZipActivity;
 
@@ -48,6 +49,9 @@ public class UseCasesFragment extends CategoryBaseFragment {
         data.add(new OperatorModel("减少频繁的网络请求",
                 "设想情景：输入框数据变化或者点击一次按钮时就要进行网络请求，这样会产生大量的网络请求，而实际上又不需要，" +
                         "这时候可以通过 debounce 过滤掉发射频率过快的请求。"));
+        data.add(new OperatorModel("间隔任务实现心跳",
+                "可能我们会遇上各种即时通讯，如果是自己家开发的 IM 即时通讯，我相信在移动端一定少不了心跳包的管理，" +
+                        "而我们 RxJava 2.x 的 interval 操作符棒我们解决了这个问题。"));
     }
 
     @Override
@@ -70,6 +74,9 @@ public class UseCasesFragment extends CategoryBaseFragment {
                 break;
             case 5:
                 startActivity(new Intent(getActivity(), RxCaseDebounceActivity.class));
+                break;
+            case 6:
+                startActivity(new Intent(getActivity(), RxCaseIntervalActivity.class));
                 break;
         }
     }

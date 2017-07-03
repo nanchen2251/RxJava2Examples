@@ -49,8 +49,6 @@ public class RxCaseDebounceActivity extends RxOperatorBaseActivity {
                     public void accept(@NonNull Object o) throws Exception {
                         clickBtn();
                     }
-
-
                 });
 
 

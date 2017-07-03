@@ -145,6 +145,7 @@
         <activity android:name=".module.rxjava2.usecases.flatMap.RxCaseFlatMapActivity"/>
         <activity android:name=".module.rxjava2.usecases.concat.RxCaseConcatActivity"/>
         <activity android:name=".module.rxjava2.usecases.debounce.RxCaseDebounceActivity"/>
+        <activity android:name=".module.rxjava2.usecases.interval.RxCaseIntervalActivity"/>
 
     </application>
 
