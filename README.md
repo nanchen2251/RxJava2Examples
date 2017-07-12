@@ -8,7 +8,7 @@
 Activity基类封装处理 
 
 ### 文章链接：
-[这可能是最好的RxJava 2.x 入门教程（完结版）](http://www.apkbus.com/blog-898535-68185.html)<br>
+[这可能是最好的RxJava 2.x 入门教程（完结版）](http://www.jianshu.com/p/0cd258eecf60)<br>
 [这可能是最好的RxJava 2.x 入门教程（一）](http://www.jianshu.com/p/a93c79e9f689)<br>
 [这可能是最好的RxJava 2.x 入门教程（二）](http://www.jianshu.com/p/b39afa92807e)<br>
 [这可能是最好的RxJava 2.x 入门教程（三）](http://www.jianshu.com/p/e9c79eacc8e3)<br>
@@ -20,6 +20,8 @@ Activity基类封装处理
     南尘<br>
     四川成都<br>
     [其它开源](https://github.com/nanchen2251/)<br>
+    [个人博客](https://nanchen2251.github.io/)<br>
+    [简书](http://www.jianshu.com/u/f690947ed5a6)<br>
     [博客园](http://www.cnblogs.com/liushilin/)<br>
     交流群：118116509
 
