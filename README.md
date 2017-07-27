@@ -1,11 +1,11 @@
 # RxJava2Examples
 ### RxJava2 Examples——它可能是从RxJava1跳到RxJava2（学习RxJava2）最好的例子Demo
 
-> RxJava 1.x 到RxJava 2.x的无缝对接  
-无需学习RxJava 1.x,直接学习RxJava 2.x  
+> RxJava 1.x 到 RxJava 2.x 的无缝对接  
+无需学习 RxJava 1.x,直接学习 RxJava 2.x  
 完备齐全的操作符示例  
-支持与Retrofit交互处理示例  
-Activity基类封装处理 
+支持与 Retrofit 交互处理示例  
+Activity 基类封装处理 
 
 ### 文章链接：
 [这可能是最好的RxJava 2.x 入门教程（完结版）](http://www.jianshu.com/p/0cd258eecf60)<br>
