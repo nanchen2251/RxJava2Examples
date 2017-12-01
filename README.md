@@ -27,12 +27,6 @@ Activity 基类封装处理
     欢迎投稿(关注)我的唯一公众号，公众号搜索 nanchen 或者扫描下方二维码：<br>
     ![](http://images2015.cnblogs.com/blog/845964/201707/845964-20170718083641599-1963842541.jpg)
     
-    
-### 推荐
-
-这里推荐一下 [stormzhang](http://stormzhang.com) 的小密圈「帅张和他的朋友们」，体验用心的帅比张。<br>
-点击后面链接或扫描下方二维码加入，http://t.xiaomiquan.com/VBuZRVV<br>
-![](https://github.com/nanchen2251/AiYaSchoolPush/blob/master/photo/stormzhang.png)
 
 ### Just a gif
 ![](https://github.com/nanchen2251/RxJava2Examples/blob/master/GIF.gif)
