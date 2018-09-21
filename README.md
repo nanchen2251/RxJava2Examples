@@ -1,6 +1,5 @@
 # RxJava2Examples
 ### RxJava2 Examples——它可能是从RxJava1跳到RxJava2（学习RxJava2）最好的例子Demo
-#### 号外：听说「nanchen」搞了一个 Android 开发者的免费福利，不行你看：[给 Android 开发者的一点福利：免费模拟面试](http://mp.weixin.qq.com/s/WRdSmGxwDp-CpQcSlmJYlg)
 
 > RxJava 1.x 到 RxJava 2.x 的无缝对接  
 无需学习 RxJava 1.x, 直接学习 RxJava 2.x  
