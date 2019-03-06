@@ -25,7 +25,7 @@ Activity 基类封装处理
     [博客园](http://www.cnblogs.com/liushilin/)<br>
     交流群：118116509 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e6ad4af66393684e1d0c9441403b049d2d5670ec0ce9f72150e694cbb7c16b0a"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Android神技侧漏交流群" title="Android神技侧漏交流群"></a>( 点击图标即可加入 )<br>
     欢迎投稿(关注)我的唯一公众号，公众号搜索 nanchen 或者扫描下方二维码：<br>
-    ![](http://images2015.cnblogs.com/blog/845964/201707/845964-20170718083641599-1963842541.jpg)
+    ![](https://github.com/nanchen2251/Blogs/blob/master/images/nanchen12.jpg)
     
 
 ### Just a gif
